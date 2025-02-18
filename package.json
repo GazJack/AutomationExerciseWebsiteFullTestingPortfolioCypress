@@ -1,5 +1,17 @@
 {
   "dependencies": {
     "cypress": "^14.0.3"
-  }
+  },
+  "name": "baigiamasis-automationexercise_website_full_testing_portfolio",
+  "version": "1.0.0",
+  "main": "cypress.config.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": ""
 }
