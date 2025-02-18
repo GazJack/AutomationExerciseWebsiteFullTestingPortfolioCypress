@@ -1,0 +1,13 @@
+27 paskaita. Automatinis svetainės testavimas
+Terminas: 2025 m. kovo 24 d., 23:59 val.
+Instrukcijos
+Susikurti naują Node.js projektą, jame susikonfigūruoti Cypress E2E testavimui
+Šiam projektui susikurti atskirą GitHub repositoriją "automationexercise_website_full_testing_portfolio"
+Atlikti testavimą puslapiui: https://automationexercise.com/ 
+Atlikti Test 1, Test 2, Test 3 , Test 4, Test 5 testus. Galite atlikti savo nuožiūra ir daugiau.
+
+
+
+Testavimo scenarijai aprašyti https://automationexercise.com/test_cases
+Stenkitės atlikti kuo tvarkingiau, nes reikės suprogramuoti visus testavimo scenarijus.
+Tai dalis baigiamojo kurso darbo.
