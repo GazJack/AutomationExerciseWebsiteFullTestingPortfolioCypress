@@ -118,18 +118,11 @@ describe('Test Case 4: Logout User', () => { // 1. Launch browser
 });
 
 // Test Case 5: Register User with existing email
-// 1. Launch browser
-// 2. Navigate to url 'http://automationexercise.com'
-// 3. Verify that home page is visible successfully
-// 5. Verify 'New User Signup!' is visible
-// 6. Enter name and already registered email address
-// 7. Click 'Signup' button
-// 8. Verify error 'Email Address already exist!' is visible
-describe('Test Case 5: Register User with existing email', () => { // 1. Launch browser
+describe('Test Case 5: Register User with existing email', () => { 
     it('Register user with existing email', () => {
-        cy.visit('https://automationexercise.com'); // 2. Navigate to url 'http://automationexercise.com'
-        cy.contains('Home').should('be.visible'); // 3. Verify that home page is visible successfully
-        cy.contains('Signup / Login').click(); // 4. Click on 'Signup / Login' button
+        cy.visit('https://automationexercise.com'); 
+        cy.contains('Home').should('be.visible'); 
+        cy.contains('Signup / Login').click(); 
         cy.contains('New User Signup!').should('be.visible');
         cy.get('[data-qa="signup-name"]').type('Zebre');
         cy.get('[data-qa="signup-email"]').type('zebre@example.com');
