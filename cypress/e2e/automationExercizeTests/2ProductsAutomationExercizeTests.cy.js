@@ -1,18 +1,17 @@
 // Test Case 6: Contact Us Form
-describe('Test Case 6: Contact Us Form', () => { // 1. Launch browser
+describe('Test Case 6: Contact Us Form', () => {
     it("Contact us Form", () => {
-        cy.visit('https://automationexercise.com'); // 2. Navigate to url 'http://automationexercise.com'
-        cy.contains('Home').should('be.visible'); // 3. Verify that home page is visible successfully
-        cy.contains('Contact us').click(); // 4. Click on 'Contact Us' button
+        cy.visit('https://automationexercise.com');
+        cy.contains('Home').should('be.visible');
+        cy.contains('Contact us').click();
         cy.get('[data-qa="name"]').type('Bebras');
         cy.get('[data-qa="email"]').type('bebras@example.com');
         cy.get('[data-qa="subject"]').type('Pasiūlymas');
         cy.get('[data-qa="message"]').type('Pastebėjau, kad jūsų puslapio nuotrauka yra nekokybiška. Siūlau dabartinę puslapio nuotrauką pakeisti į mano prisegtą.');
         cy.get('[name="upload_file"]').selectFile('cypress/fixtures/baigiamajam.png');
-        cy.get('[data-qa="submit-button"]').click(); // 8. Click 'Submit' button
+        cy.get('[data-qa="submit-button"]').click();
         cy.contains('Success! Your details have been submitted successfully.').should('be.visible');
-        // 10. Verify success message 'Success! Your details have been submitted successfully.' is visible
-        cy.get('.btn-success').click(); // 11. Click 'Home' button and verify that landed to home page successfully
+        cy.get('.btn-success').click();
         cy.contains('Home').should('be.visible');
     })
 });
