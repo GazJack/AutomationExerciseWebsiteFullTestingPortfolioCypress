@@ -26,14 +26,33 @@ describe('Test Case 20: Search Products and Verify Cart After Login', () => {
         cy.get('.single-products').each(($el) => {
             cy.wrap($el).should('be.visible');
         });
-
-
+        cy.get('.single-products').first().find('a').contains('Add to cart').click({ force: true });
+        cy.get('#cartModal').should('be.visible');
+        cy.get('#cartModal').contains('Continue Shopping').click({ force: true });
+        cy.get('.single-products').eq(1).find('a').contains('Add to cart').click({ force: true });
+        cy.get('#cartModal').should('be.visible');
+        cy.get('#cartModal').contains('Continue Shopping').click({ force: true });
+        cy.get('.single-products').eq(2).find('a').contains('Add to cart').click({ force: true });
+        cy.get('#cartModal').should('be.visible');
+        cy.get('#cartModal').contains('Continue Shopping').click({ force: true });
+        cy.contains('Cart').click();
+        cy.get('#cart_info #cart_info_table .cart_quantity').should('have.length', 3);
+        cy.get('#cart_info #cart_info_table .cart_quantity').each(($el) => {
+            cy.wrap($el).should('be.visible');
+        });
+        cy.contains('Signup / Login').click();
+        cy.get('[data-qa="login-email"]').type('zebre@example.com');
+        cy.get('[data-qa="login-password"]').type('pass');
+        cy.get('[data-qa="login-button"]').click();
+        cy.contains('Cart').click();
+        cy.get('#cart_info #cart_info_table .cart_quantity').should('have.length', 3);
+        cy.get('#cart_info #cart_info_table .cart_quantity').each(($el) => {
+            cy.wrap($el).should('be.visible');
+        });
+        cy.contains('Logout').click();
     })
 });
 
-// 7. Verify all the products related to search are visible
-// 8. Add those products to cart
-// 9. Click 'Cart' button and verify that products are visible in cart
 // 10. Click 'Signup / Login' button and submit login details
 // 11. Again, go to Cart page
 // 12. Verify that those products are visible in cart after login as well
