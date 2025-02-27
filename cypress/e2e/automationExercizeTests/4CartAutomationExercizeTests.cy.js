@@ -53,6 +53,45 @@ describe('Test Case 20: Search Products and Verify Cart After Login', () => {
     })
 });
 
-// 10. Click 'Signup / Login' button and submit login details
-// 11. Again, go to Cart page
-// 12. Verify that those products are visible in cart after login as well
+// Test Case 21: Add review on product
+describe('Test Case 21: Add review on product', () => {
+    it("Add review on product", () => {
+        cy.visit('https://automationexercise.com');
+        cy.contains('Home').should('be.visible');
+        cy.contains('Products').click();
+        cy.contains('h2', 'All Products').should('be.visible');
+        // norėčiau geresnį kelią rasti:
+        cy.get(':nth-child(6) > .product-image-wrapper > .choose > .nav > li > a').contains('View Product').click();
+        cy.contains('Write Your Review').should('be.visible');
+        cy.get('#name').type('Zebrė');
+        cy.get('#email').type('zebre@example.com');
+        cy.get('#review').type('Graži ir kokybiška suknelė.');
+        cy.get('#button-review').click();
+        cy.get('#review-section').contains('Thank you for your review.').should('be.visible');
+    })
+});
+
+// Test Case 22: Add to cart from Recommended 
+describe('Test Case 22: Add to cart from Recommended ', () => {
+    it("Add to cart from Recommended ", () => {
+        cy.visit('https://automationexercise.com');
+        cy.contains('Home').should('be.visible');
+        cy.get('.recommended_items').contains('recommended items').should('be.visible');
+        cy.get('.single-products').contains('Add to cart').click();
+        // kaip paspausti antrajį produktą?
+        cy.get('.text-center').contains('View Cart').click();
+        cy.get('#cart_info').should('have.length', '1');
+    })
+});
+
+// Test Case 25: Verify Scroll Up using 'Arrow' button and Scroll Down functionality
+describe('Test Case 22: Add to cart from Recommended ', () => {
+    it("Add to cart from Recommended ", () => {
+        cy.visit('https://automationexercise.com');
+        cy.contains('Home').should('be.visible');
+        cy.scrollTo("bottom");
+        cy.get('.single-widget').contains('Subscription').should('be.visible');
+        cy.get('#scrollUp').click();
+        cy.get('.carousel-inner').contains('Full-Fledged practice website for Automation Engineers').should('be.visible');
+    })
+});

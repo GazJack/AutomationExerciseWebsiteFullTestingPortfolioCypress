@@ -39,6 +39,18 @@ describe('Test Case 12: Add Products in Cart', () => {
     })
 });
 
+// // Kristinos: 
+
+// cy.get(':nth-child(3) > .product-image-wrapper > .single-products > .productinfo > .overlay-content').should('contain', 'Add to cart').and('be.visible').click();//neranda užsklandos su add to cart
+// cy.contains('Products').click();
+// // Annos:
+//         cy.get('.features_items .product-image-wrapper').first().scrollIntoView();
+//         cy.wait(1000);
+//         cy.get('.features_items .product-image-wrapper').first().trigger('mouseover');
+//         cy.wait(1000);
+//         cy.get('.features_items .product-image-wrapper').first().contains('Add to cart').click({ force: true });
+//         cy.wait(2000);
+
 // Test Case 13: Verify Product quantity in Cart
 describe('Test Case 13: Verify Product quantity in Cart', () => {
     it("Verify Product quantity in Cart", () => {
