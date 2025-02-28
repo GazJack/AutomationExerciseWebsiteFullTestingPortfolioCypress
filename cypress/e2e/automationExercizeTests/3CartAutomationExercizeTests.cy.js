@@ -1,8 +1,7 @@
 // Test Case 11: Verify Subscription in Cart page
 describe('Test Case 11: Verify Subscription in Cart page', () => {
     it("Verify Subscription in Cart page", () => {
-        cy.visit('https://automationexercise.com');
-        cy.contains('Home').should('be.visible');
+        cy.homePage();
         cy.contains('Cart').click();
         cy.contains('Subscription').should('be.visible');
         cy.get('#susbscribe_email').type('zebre@example.com');
@@ -14,8 +13,7 @@ describe('Test Case 11: Verify Subscription in Cart page', () => {
 // Test Case 12: Add Products in Cart
 describe('Test Case 12: Add Products in Cart', () => {
     it("Add Products in Cart", () => {
-        cy.visit('https://automationexercise.com');
-        cy.contains('Home').should('be.visible');
+        cy.homePage();
         cy.contains('Products').click();
         cy.get('.features_items').should('be.visible');
         cy.get('.product-overlay').first().trigger('mouseover');
@@ -42,8 +40,7 @@ describe('Test Case 12: Add Products in Cart', () => {
 // Test Case 13: Verify Product quantity in Cart
 describe('Test Case 13: Verify Product quantity in Cart', () => {
     it("Verify Product quantity in Cart", () => {
-        cy.visit('https://automationexercise.com');
-        cy.contains('Home').should('be.visible');
+        cy.homePage();
         cy.get(':nth-child(5) .product-image-wrapper .choose .nav li a').contains('View Product').click();
         cy.contains('h2', 'Sleeveless Dress').should('be.visible');
         cy.get('#quantity').clear();
@@ -129,8 +126,7 @@ describe('Test Case 13: Verify Product quantity in Cart', () => {
 // Test Case 17: Remove Products From Cart
 describe('Test Case 17: Remove Products From Cart', () => {
     it("Remove Products From Cart", () => {
-        cy.visit('https://automationexercise.com');
-        cy.contains('Home').should('be.visible');
+        cy.homePage();
         cy.contains('Products').click();
         cy.get('.features_items').should('be.visible');
         cy.get('.product-overlay').first().trigger('mouseover');
@@ -151,8 +147,7 @@ describe('Test Case 17: Remove Products From Cart', () => {
 // Test Case 18: View Category Products
 describe('Test Case 18: View Category Products', () => {
     it("View Category Products", () => {
-        cy.visit('https://automationexercise.com');
-        cy.contains('Home').should('be.visible');
+        cy.homePage();
         cy.contains('Category').should('be.visible');
         cy.get(':nth-child(1) > .panel-heading > .panel-title > a').click();
         cy.get('#Women > .panel-body > ul > :nth-child(2) > a').click();
