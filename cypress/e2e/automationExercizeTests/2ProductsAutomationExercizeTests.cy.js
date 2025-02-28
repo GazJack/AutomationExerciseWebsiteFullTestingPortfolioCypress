@@ -1,8 +1,7 @@
 // Test Case 6: Contact Us Form
 describe('Test Case 6: Contact Us Form', () => {
     it("Contact us Form", () => {
-        cy.visit('https://automationexercise.com');
-        cy.contains('Home').should('be.visible');
+        cy.homePage();
         cy.contains('Contact us').click();
         cy.get('[data-qa="name"]').type('Bebras');
         cy.get('[data-qa="email"]').type('bebras@example.com');
@@ -19,8 +18,7 @@ describe('Test Case 6: Contact Us Form', () => {
 // Test Case 7: Verify Test Cases Page
 describe('Test Case 7: Verify Test Cases Page', () => {
     it("Verify Test Cases Page", () => {
-        cy.visit('https://automationexercise.com');
-        cy.contains('Home').should('be.visible');
+        cy.homePage();
         cy.contains('Test Cases').click();
         cy.contains('Test Cases').should('be.visible');
     })
@@ -29,8 +27,7 @@ describe('Test Case 7: Verify Test Cases Page', () => {
 // Test Case 8: Verify All Products and product detail page
 describe('Test Case 8: Verify All Products and product detail page', () => {
     it("Verify All Products and product detail page", () => {
-        cy.visit('https://automationexercise.com');
-        cy.contains('Home').should('be.visible');
+        cy.homePage();
         cy.contains('Products').click();
         cy.contains('All Products').should('be.visible');
         cy.get('.features_items').should('be.visible');
@@ -48,8 +45,7 @@ describe('Test Case 8: Verify All Products and product detail page', () => {
 // Test Case 9: Search Product
 describe('Test Case 9: Search Product', () => {
     it("Search Product", () => {
-        cy.visit('https://automationexercise.com');
-        cy.contains('Home').should('be.visible');
+        cy.homePage();
         cy.contains('Products').click();
         cy.contains('All Products').should('be.visible');
         cy.get('#search_product').type('dress');
@@ -59,11 +55,13 @@ describe('Test Case 9: Search Product', () => {
     })
 });
 
+
+
+
 // Test Case 10: Verify Subscription in home page
 describe('Test Case 10: Verify Subscription in home page', () => {
     it("Verify Subscription in home page", () => {
-        cy.visit('https://automationexercise.com');
-        cy.contains('Home').should('be.visible');
+        cy.homePage();
         cy.contains('Subscription').should('be.visible');
         cy.get('#susbscribe_email').type('zebre@example.com');
         cy.get('#subscribe').click();

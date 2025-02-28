@@ -1,8 +1,7 @@
 // Test Case 1: Register User
 describe('Test Case 1: Register User', () => {
     it("Let's start testing this site", () => {
-        cy.visit('https://automationexercise.com');
-        cy.contains('Home').should('be.visible');
+        cy.homePage();
         cy.contains('Signup / Login').click();
         cy.contains('New User Signup!').should('be.visible');
         cy.get('[data-qa="signup-name"]').type('Zebras');
@@ -39,8 +38,7 @@ describe('Test Case 1: Register User', () => {
 // Test Case 2: Login User with correct email and password
 describe('Test Case 2: Login User with correct email and password', () => {
     it('Login with correct data', () => {
-        cy.visit('https://automationexercise.com');
-        cy.contains('Home').should('be.visible');
+        cy.homePage();
         cy.contains('Signup / Login').click();
         cy.contains('New User Signup!').should('be.visible');
         cy.get('[data-qa="signup-name"]').type('Zebriukas');
@@ -81,8 +79,7 @@ describe('Test Case 2: Login User with correct email and password', () => {
 // Test Case 3: Login User with incorrect email and password
 describe('Test Case 3: Login User with incorrect email and password', () => {
     it('Login with incorrect data', () => {
-        cy.visit('https://automationexercise.com');
-        cy.contains('Home').should('be.visible');
+        cy.homePage();
         cy.contains('Signup / Login').click();
         cy.contains('Login to your account').should('be.visible');
         cy.get('[data-qa="login-email"]').type('zebras@haha.com');
@@ -94,8 +91,7 @@ describe('Test Case 3: Login User with incorrect email and password', () => {
 
 describe('Test Case 4: Logout User', () => {
     it('Login and logout already created user', () => {
-        cy.visit('https://automationexercise.com');
-        cy.contains('Home').should('be.visible');
+        cy.homePage();
         cy.contains('Signup / Login').click();
         cy.contains('Login to your account').should('be.visible');
         cy.get('[data-qa="login-email"]').type('zebre@example.com');
@@ -110,8 +106,7 @@ describe('Test Case 4: Logout User', () => {
 // Test Case 5: Register User with existing email
 describe('Test Case 5: Register User with existing email', () => {
     it('Register user with existing email', () => {
-        cy.visit('https://automationexercise.com');
-        cy.contains('Home').should('be.visible');
+        cy.homePage();
         cy.contains('Signup / Login').click();
         cy.contains('New User Signup!').should('be.visible');
         cy.get('[data-qa="signup-name"]').type('Zebre');

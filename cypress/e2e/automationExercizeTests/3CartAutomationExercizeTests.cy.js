@@ -54,6 +54,7 @@ describe('Test Case 13: Verify Product quantity in Cart', () => {
     })
 });
 
+// 14: prisijungima galima sukelti i funkcija
 // // Test Case 14: Place Order: Register while Checkout
 // describe('Test Case 14: Place Order: Register while Checkout', () => {
 //     it("Place Order: Register while Checkout", () => {
