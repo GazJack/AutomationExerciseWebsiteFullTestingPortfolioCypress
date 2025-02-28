@@ -55,9 +55,6 @@ describe('Test Case 9: Search Product', () => {
     })
 });
 
-
-
-
 // Test Case 10: Verify Subscription in home page
 describe('Test Case 10: Verify Subscription in home page', () => {
     it("Verify Subscription in home page", () => {
