@@ -1,4 +1,6 @@
 // Test Case 6: Contact Us Form
+import 'cypress-file-upload';
+
 describe('Test Case 6: Contact Us Form', () => {
     it("Contact us Form", () => {
         cy.homePage();
@@ -7,7 +9,7 @@ describe('Test Case 6: Contact Us Form', () => {
         cy.get('[data-qa="email"]').type('bebras@example.com');
         cy.get('[data-qa="subject"]').type('Pasiūlymas');
         cy.get('[data-qa="message"]').type('Pastebėjau, kad jūsų puslapio nuotrauka yra nekokybiška. Siūlau dabartinę puslapio nuotrauką pakeisti į mano prisegtą.');
-        cy.get('[name="upload_file"]').selectFile('cypress/fixtures/baigiamajam.png');
+        cy.get('input[type="file"]').attachFile('baigiamajam.png');
         cy.get('[data-qa="submit-button"]').click();
         cy.contains('Success! Your details have been submitted successfully.').should('be.visible');
         cy.get('.btn-success').click();

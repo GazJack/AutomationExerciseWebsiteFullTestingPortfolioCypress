@@ -5,7 +5,9 @@
   "name": "baigiamasis-automationexercise_website_full_testing_portfolio",
   "version": "1.0.0",
   "main": "cypress.config.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "cypress-file-upload": "^5.0.8"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
