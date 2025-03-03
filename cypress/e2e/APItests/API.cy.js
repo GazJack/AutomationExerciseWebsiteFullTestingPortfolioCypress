@@ -14,7 +14,7 @@ describe('API 1', () => {
   });
 
   describe('API 3', () => {
-    it.only('Get All Brands List', () => {
+    it('Get All Brands List', () => {
       cy.request('GET', 'https://automationexercise.com/api/brandsList').then((response) => {
         const responseBody = JSON.parse(response.body);
         expect(responseBody).to.have.property('responseCode', 200);
@@ -36,30 +36,6 @@ describe('API 4', () => {
     })
   })
 });
-
-describe('API 5', () => {
-  it('Post to Search Product', () => {
-    cy.request({
-      method: 'POST', 
-      url: 'https://automationexercise.com/api/searchProduct', 
-      body: {search_product: 'dress'}
-    }).then((response) => {
-      expect(response.status).to.eq(200);
-      const responseBody = JSON.parse(response.body);
-      expect(responseBody.products).to.be.an('array').that.is.not.empty;
-
-        responseBody.products.forEach((product) => {
-            expect(product).to.have.property('id');
-            expect(product).to.have.property('name');
-            expect(product).to.have.property('price');
-            expect(product).to.have.property('brand');
-            expect(product).to.have.property('category');
-            expect(product.category).to.have.property('usertype');
-            expect(product.category).to.have.property('category');
-           })
-        });
-     });
-  });
 
 // cia gal per daug testu pagal uzduoti?
 // susirasyti paaiskinimus:
@@ -255,7 +231,7 @@ describe('API 14', () => {
     cy.request({
       method: 'GET',
       url: 'https://automationexercise.com/api/getUserDetailByEmail',
-      qs: { email: 'layla.smith@gmail.com' },
+      qs: { email: 'layla.smith88@gmail.com' },
     }).then((response) => {
       const responseBody = JSON.parse(response.body);
       expect(responseBody).to.have.property('responseCode', 200);
