@@ -27,15 +27,21 @@ cd AutomationExerciseWebsiteFullTestingPortfolioCypress
 Ensure that you have Node.js and npm installed. Then, install the required dependencies using the following command:
 
 🖋️ npm install
+
 This will install Cypress and any other necessary packages.
 
 :rocket: Open Cypress
+
 To run the Cypress tests, use the following command:
+
 🖋️ npx cypress open
+
 This will open the Cypress Test Runner, where you can choose to run the tests in a browser.
 
 :checkered_flag: Running the Tests in Headless Mode
+
 To run all the tests in headless mode (without opening the browser window), use this command:
+
 🖋️ npx cypress run
 
 ## :memo: Writing Tests
@@ -66,7 +72,7 @@ Contributions are welcome! If you'd like to contribute to the project, please fo
 
 :rocket: Push your changes: git push origin feature/your-feature.
 
-:git_pull: Open a pull request.
+📩 Open a pull request.
 
 ## :star: License
 This project is licensed under the MIT License. See the LICENSE file for more details.
