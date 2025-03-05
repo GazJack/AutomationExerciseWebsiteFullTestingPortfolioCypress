@@ -60,12 +60,18 @@ describe('Test Case 14: Place Order: Register while Checkout', () => {
         cy.contains('Products').click();
         cy.get('.features_items').should('be.visible');
         cy.get('.features_items .product-image-wrapper').first().trigger('mouseover');
+        cy.wait(1000);
         cy.get('.features_items .product-image-wrapper').first().find('a').contains('Add to cart').click({ force: true });
+        cy.wait(1000)
         cy.get('#cartModal').should('be.visible');
+        cy.wait(1000);
         cy.get('#cartModal').contains('Continue Shopping').click({ force: true });
+        cy.wait(1000);
         cy.get('.features_items .product-image-wrapper').eq(1).trigger('mouseover');
         cy.get('.features_items .product-image-wrapper').eq(1).find('a').contains('Add to cart').click({ force: true });
+        cy.wait(1000);
         cy.get('#cartModal').contains('Continue Shopping').click({ force: true });
+        cy.wait(1000);
         cy.contains('Cart').click();
         cy.get('#cart_info').should('be.visible');
         cy.get('.col-sm-6 > .btn').click();
