@@ -10,9 +10,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run",
-    "dev": "your-dev-command-here"
+    "cypress:open": "cypress open", 
+    "cypress:run": "cypress run" 
   },
   "keywords": [],
   "author": "",
