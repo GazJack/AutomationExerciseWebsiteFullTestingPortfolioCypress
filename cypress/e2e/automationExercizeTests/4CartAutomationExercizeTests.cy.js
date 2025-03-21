@@ -1,4 +1,3 @@
-// Test Case 19: View & Cart Brand Products
 describe('Test Case 19: View & Cart Brand Products', () => {
     it("View & Cart Brand Products", () => {
         cy.homePage();
@@ -11,7 +10,6 @@ describe('Test Case 19: View & Cart Brand Products', () => {
     })
 });
 
-// Test Case 20: Search Products and Verify Cart After Login
 describe('Test Case 20: Search Products and Verify Cart After Login', () => {
     it("Search Products and Verify Cart After Login", () => {
         cy.homePage();
@@ -51,7 +49,6 @@ describe('Test Case 20: Search Products and Verify Cart After Login', () => {
     })
 });
 
-// Test Case 21: Add review on product
 describe('Test Case 21: Add review on product', () => {
     it("Add review on product", () => {
         cy.homePage();
@@ -67,7 +64,6 @@ describe('Test Case 21: Add review on product', () => {
     })
 });
 
-// Test Case 22: Add to cart from Recommended 
 describe('Test Case 22: Add to cart from Recommended ', () => {
     it("Add to cart from Recommended ", () => {
         cy.homePage();
@@ -78,7 +74,6 @@ describe('Test Case 22: Add to cart from Recommended ', () => {
     })
 });
 
-// Test Case 25: Verify Scroll Up using 'Arrow' button and Scroll Down functionality
 describe('Test Case 22: Add to cart from Recommended ', () => {
     it("Add to cart from Recommended ", () => {
         cy.homePage();

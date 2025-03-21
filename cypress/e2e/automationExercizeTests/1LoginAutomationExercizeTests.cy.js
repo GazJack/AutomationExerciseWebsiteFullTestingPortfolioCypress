@@ -1,4 +1,3 @@
-// Test Case 1: Register User
 describe('Test Case 1: Register User', () => {
     it("Let's start testing this site", () => {
         cy.homePage();
@@ -35,7 +34,6 @@ describe('Test Case 1: Register User', () => {
     });
 });
 
-// Test Case 2: Login User with correct email and password
 describe('Test Case 2: Login User with correct email and password', () => {
     it('Login with correct data', () => {
         cy.homePage();
@@ -76,7 +74,6 @@ describe('Test Case 2: Login User with correct email and password', () => {
     });
 });
 
-// Test Case 3: Login User with incorrect email and password
 describe('Test Case 3: Login User with incorrect email and password', () => {
     it('Login with incorrect data', () => {
         cy.homePage();
@@ -103,7 +100,6 @@ describe('Test Case 4: Logout User', () => {
     });
 });
 
-// Test Case 5: Register User with existing email
 describe('Test Case 5: Register User with existing email', () => {
     it('Register user with existing email', () => {
         cy.homePage();

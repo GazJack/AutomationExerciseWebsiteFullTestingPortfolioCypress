@@ -1,4 +1,3 @@
-// Test Case 6: Contact Us Form
 import 'cypress-file-upload';
 
 describe('Test Case 6: Contact Us Form', () => {
@@ -17,7 +16,6 @@ describe('Test Case 6: Contact Us Form', () => {
     })
 });
 
-// Test Case 7: Verify Test Cases Page
 describe('Test Case 7: Verify Test Cases Page', () => {
     it("Verify Test Cases Page", () => {
         cy.homePage();
@@ -26,7 +24,6 @@ describe('Test Case 7: Verify Test Cases Page', () => {
     })
 });
 
-// Test Case 8: Verify All Products and product detail page
 describe('Test Case 8: Verify All Products and product detail page', () => {
     it("Verify All Products and product detail page", () => {
         cy.homePage();
@@ -44,7 +41,6 @@ describe('Test Case 8: Verify All Products and product detail page', () => {
     })
 });
 
-// Test Case 9: Search Product
 describe('Test Case 9: Search Product', () => {
     it("Search Product", () => {
         cy.homePage();
@@ -57,7 +53,6 @@ describe('Test Case 9: Search Product', () => {
     })
 });
 
-// Test Case 10: Verify Subscription in home page
 describe('Test Case 10: Verify Subscription in home page', () => {
     it("Verify Subscription in home page", () => {
         cy.homePage();
