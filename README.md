@@ -26,7 +26,9 @@ cd AutomationExerciseWebsiteFullTestingPortfolioCypress
 :gear: Install Dependencies
 Ensure that you have Node.js and npm installed. Then, install the required dependencies using the following command:
 
-🖋️ npm install
+```
+npm install
+```
 
 This will install Cypress and any other necessary packages.
 
@@ -34,7 +36,9 @@ This will install Cypress and any other necessary packages.
 
 To run the Cypress tests, use the following command:
 
-🖋️ npx cypress open
+```
+npx cypress open
+```
 
 This will open the Cypress Test Runner, where you can choose to run the tests in a browser.
 
@@ -42,7 +46,9 @@ This will open the Cypress Test Runner, where you can choose to run the tests in
 
 To run all the tests in headless mode (without opening the browser window), use this command:
 
-🖋️ npx cypress run
+```
+npx cypress run
+```
 
 ## :memo: Writing Tests
 Tests in this repository are located in the cypress/integration folder. To add new tests or modify existing ones, you can create new test files or edit the current ones.
